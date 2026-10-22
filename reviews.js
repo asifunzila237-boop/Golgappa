@@ -1,0 +1,1 @@
+document.getElementById('reviewForm')?.addEventListener('submit',e=>{e.preventDefault();let n=document.getElementById('reviewName').value;alert('Thank you '+n+'! Your review has been submitted.');e.target.reset()});

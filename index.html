@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chatpate GolGappa Lab | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <div class="logo">
+        <span>🧪</span>
+        <div>
+            <strong>Chatpate</strong>
+            <small>GolGappa Lab</small>
+        </div>
+    </div>
+
+    <nav class="desktop-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="golgappa.html">GolGappa</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="trackorder.html">Track Order</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-right">
+
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="navSearch" placeholder="Search...">
+        </div>
+
+        <button class="cart-btn" onclick="toggleCart()">
+            🛒
+            <span id="cartCount">0</span>
+        </button>
+
+        <button class="hamburger" onclick="openMobileMenu()">
+            ☰
+        </button>
+
+    </div>
+</header>
+
+
+<!-- MOBILE SIDEBAR -->
+<div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
+
+<aside class="mobile-sidebar" id="mobileSidebar">
+
+    <button class="close-menu" onclick="closeMobileMenu()">×</button>
+
+    <div class="mobile-logo">
+        🧪 Chatpate GolGappa Lab
+    </div>
+
+    <a href="index.html">🏠 Home</a>
+    <a href="golgappa.html">🥣 GolGappa</a>
+    <a href="reviews.html">⭐ Reviews</a>
+    <a href="trackorder.html">📦 Track Order</a>
+    <a href="contact.html">📞 Contact</a>
+
+    <button class="mobile-cart" onclick="toggleCart(); closeMobileMenu();">
+        🛒 View Cart
+    </button>
+
+</aside>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            🧪 STREET FOOD ALCHEMY
+        </div>
+
+        <h1>
+            Welcome to the
+            <span>GolGappa Lab</span>
+        </h1>
+
+        <p>
+            Where traditional golgappas meet crazy flavors,
+            spicy experiments and delicious surprises.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="golgappa.html" class="primary-btn">
+                Explore GolGappas →
+            </a>
+
+            <a href="#about" class="secondary-btn">
+                Discover More
+            </a>
+        </div>
+
+        <div class="hero-stats">
+
+            <div>
+                <strong>6+</strong>
+                <span>Experiments</span>
+            </div>
+
+            <div>
+                <strong>5K+</strong>
+                <span>Happy Foodies</span>
+            </div>
+
+            <div>
+                <strong>4.9</strong>
+                <span>Average Rating</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero-food">
+        <div class="food-circle">
+            🥣
+        </div>
+
+        <div class="floating-card card-one">
+            🔥 Extra Spicy
+        </div>
+
+        <div class="floating-card card-two">
+            ⭐ 5.0 Rating
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+<section class="features">
+
+    <div class="feature-card">
+        <div class="feature-icon">🌶️</div>
+        <h3>Fresh & Spicy</h3>
+        <p>Fresh ingredients with the perfect chatpata taste.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">🧪</div>
+        <h3>Crazy Experiments</h3>
+        <p>Unique golgappa flavors you won't find everywhere.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <h3>Fast Delivery</h3>
+        <p>Hot and fresh golgappas delivered to your door.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">❤️</div>
+        <h3>Made With Love</h3>
+        <p>Every order is carefully prepared for you.</p>
+    </div>
+
+</section>
+
+
+<!-- POPULAR -->
+<section class="section" id="popular">
+
+    <div class="section-heading">
+        <span>OUR SPECIALS</span>
+        <h2>Popular GolGappa Experiments</h2>
+        <p>Try our most loved and craziest flavors.</p>
+    </div>
+
+    <div class="home-products">
+
+        <div class="product-card">
+
+            <div class="product-image pink">
+                🍫
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-tag">Sweet Experiment</span>
+
+                <h3>Chocolate Gol Gappa</h3>
+
+                <p>
+                    A surprising combination of crispy golgappa
+                    and rich chocolate flavor.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>Rs. 350</strong>
+                    <button onclick="addToCart(1)">Add +</button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image red">
+                🔥
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-tag">Hot & Smoking</span>
+
+                <h3>Fire Gol Gappa</h3>
+
+                <p>
+                    A spicy explosion for people who love
+                    serious heat.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>Rs. 300</strong>
+                    <button onclick="addToCart(2)">Add +</button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image yellow">
+                🧀
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-tag">Best Seller</span>
+
+                <h3>Cheese Burst Gol Gappa</h3>
+
+                <p>
+                    Crispy golgappa filled with creamy cheesy
+                    goodness.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>Rs. 450</strong>
+                    <button onclick="addToCart(3)">Add +</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="center-button">
+        <a href="golgappa.html" class="primary-btn">
+            View Full Menu →
+        </a>
+    </div>
+
+</section>
+
+
+<!-- OFFER -->
+<section class="offer-section">
+
+    <div class="offer-content">
+
+        <span>🔥 LIMITED TIME OFFER</span>
+
+        <h2>
+            The Atomic GolGappa
+            Challenge
+        </h2>
+
+        <p>
+            Get our special Mix 12 Pieces box and experience
+            six different flavors in one crazy box.
+        </p>
+
+        <div class="offer-price">
+            <strong>Rs. 850</strong>
+            <del>Rs. 1000</del>
+        </div>
+
+        <a href="golgappa.html" class="secondary-btn">
+            Try The Challenge
+        </a>
+
+    </div>
+
+    <div class="offer-icon">
+        🧪
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+
+    <div class="about-image">
+        🥣
+    </div>
+
+    <div class="about-content">
+
+        <span class="section-label">ABOUT OUR LAB</span>
+
+        <h2>
+            We Don't Just Make
+            GolGappas.
+            <span>We Experiment.</span>
+        </h2>
+
+        <p>
+            Welcome to Chatpate GolGappa Lab — a place where
+            traditional street food gets a modern twist.
+        </p>
+
+        <p>
+            Our goal is simple: create delicious, exciting and
+            unforgettable golgappa experiences using fresh
+            ingredients and creative flavors.
+        </p>
+
+        <div class="about-list">
+
+            <div>✓ Fresh Ingredients</div>
+            <div>✓ Creative Flavors</div>
+            <div>✓ Hygienic Preparation</div>
+            <div>✓ Fast Delivery</div>
+
+        </div>
+
+        <a href="contact.html" class="primary-btn">
+            Visit Our Lab →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section class="section">
+
+    <div class="section-heading">
+        <span>HOW IT WORKS</span>
+        <h2>From Our Lab To Your Door</h2>
+    </div>
+
+    <div class="steps">
+
+        <div class="step">
+            <div>01</div>
+            <h3>Choose</h3>
+            <p>Select your favorite golgappa experiment.</p>
+        </div>
+
+        <div class="step">
+            <div>02</div>
+            <h3>Order</h3>
+            <p>Add items to cart and complete checkout.</p>
+        </div>
+
+        <div class="step">
+            <div>03</div>
+            <h3>Prepare</h3>
+            <p>Our food lab prepares your fresh order.</p>
+        </div>
+
+        <div class="step">
+            <div>04</div>
+            <h3>Enjoy</h3>
+            <p>Receive your order and enjoy every bite.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+<section class="reviews-preview">
+
+    <div class="section-heading">
+
+        <span>FOODIE REVIEWS</span>
+
+        <h2>What Our Customers Say</h2>
+
+    </div>
+
+    <div class="review-grid">
+
+        <div class="review-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "The cheese burst golgappa is absolutely crazy!
+                I had never tried anything like this before."
+            </p>
+
+            <h4>— Ayesha K.</h4>
+
+        </div>
+
+        <div class="review-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Fire GolGappa is actually spicy! Perfect for
+                anyone who loves hot food."
+            </p>
+
+            <h4>— Hamza R.</h4>
+
+        </div>
+
+        <div class="review-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Fresh, tasty and delivered quickly. Definitely
+                ordering again."
+            </p>
+
+            <h4>— Sara M.</h4>
+
+        </div>
+
+    </div>
+
+    <div class="center-button">
+        <a href="reviews.html" class="secondary-btn">
+            Read All Reviews →
+        </a>
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+    <h2>Ready For A Chatpata Experiment?</h2>
+
+    <p>
+        Your next favorite golgappa is waiting.
+    </p>
+
+    <a href="golgappa.html" class="primary-btn">
+        Order Now 🛒
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <div class="footer-about">
+
+            <div class="footer-logo">
+                🧪 Chatpate GolGappa Lab
+            </div>
+
+            <p>
+                Bringing creative flavors and traditional
+                street food together.
+            </p>
+
+            <div class="socials">
+                <a href="#">f</a>
+                <a href="#">◎</a>
+                <a href="#">𝕏</a>
+                <a href="#">▶</a>
+            </div>
+
+        </div>
+
+
+        <div>
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="golgappa.html">GolGappa</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="trackorder.html">Track Order</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+
+        <div>
+            <h3>Our Menu</h3>
+
+            <a href="golgappa.html">Chocolate GolGappa</a>
+            <a href="golgappa.html">Fire GolGappa</a>
+            <a href="golgappa.html">Cheese Burst</a>
+            <a href="golgappa.html">Mint Mojito</a>
+            <a href="golgappa.html">Peri Peri</a>
+        </div>
+
+
+        <div>
+            <h3>Contact</h3>
+
+            <p>📍 Karachi, Pakistan</p>
+            <p>📞 +92 300 1234567</p>
+            <p>✉ hello@golgappalab.com</p>
+
+            <h4>Opening Hours</h4>
+            <p>Mon - Sun: 12 PM - 11 PM</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Chatpate GolGappa Lab. All Rights Reserved.
+        </p>
+
+        <p>
+            Made with ❤️ for GolGappa Lovers
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+
+    <div class="cart-header">
+
+        <h2>🛒 Your Cart</h2>
+
+        <button onclick="toggleCart()">×</button>
+
+    </div>
+
+    <div id="cartItems" class="cart-items">
+        <p class="empty-cart">Your cart is empty.</p>
+    </div>
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+            <span>Total</span>
+            <strong id="cartTotal">Rs. 0</strong>
+        </div>
+
+        <button class="checkout-btn" onclick="openCheckout()">
+            Proceed to Checkout
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- CHECKOUT MODAL -->
+<div class="modal" id="checkoutModal">
+
+    <div class="modal-box">
+
+        <button class="modal-close" onclick="closeCheckout()">×</button>
+
+        <h2>Complete Your Order</h2>
+
+        <form onsubmit="placeOrder(event)">
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="Phone Number"
+                required
+            >
+
+            <textarea
+                id="customerAddress"
+                placeholder="Delivery Address"
+                required
+            ></textarea>
+
+            <select id="paymentMethod" required>
+                <option value="">Select Payment Method</option>
+                <option>Cash on Delivery</option>
+                <option>JazzCash</option>
+                <option>EasyPaisa</option>
+            </select>
+
+            <button type="submit" class="primary-btn full-btn">
+                Place Order
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- SUCCESS -->
+<div class="modal" id="successModal">
+
+    <div class="success-box">
+
+        <div class="success-icon">✓</div>
+
+        <h2>Order Placed!</h2>
+
+        <p>
+            Your order has been received successfully.
+        </p>
+
+        <p>
+            Order Number:
+            <strong id="generatedOrder"></strong>
+        </p>
+
+        <button class="primary-btn" onclick="closeSuccess()">
+            Done
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

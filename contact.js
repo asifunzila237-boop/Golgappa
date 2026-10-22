@@ -1,0 +1,1 @@
+document.getElementById('contactForm')?.addEventListener('submit',e=>{e.preventDefault();let n=document.getElementById('contactName').value;document.getElementById('contactMessageBox').textContent='✓ Thank you '+n+'! Your message has been sent successfully.';e.target.reset()});
